@@ -139,7 +139,7 @@ export default function ContactSection() {
 
           {/* CV Download */}
          <a
-  href="/Mohamed_Khaled_CV.pdf"
+  href="/CV/Mohamed_KhaledCV.pdf"
   download="Mohamed_Khaled_CV.pdf"
   className="w-full mt-6 py-4 rounded-xl text-base font-semibold text-white flex items-center justify-center gap-3 transition-all duration-200 hover:scale-[1.02] hover:shadow-glow"
   style={{
