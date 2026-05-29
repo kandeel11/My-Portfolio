@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/Geist-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+    --primary: 174 100% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 258 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 174 100% 27%;
+    --radius: 0.625rem;
+
+    --font-sans: 'Geist Sans', system-ui, sans-serif;
+    --font-mono: 'Geist Mono', monospace;
+
+    /* Custom Light Theme Colors */
+    --deep-space: 210 40% 98%; /* Main Background: #F8FAFC */
+    --surface-dark: 0 0% 100%; /* Card Background: #FFFFFF */
+    --surface-raised: 210 40% 96%; /* Hover Background: #F1F5F9 */
+    --charcoal: 214 32% 91%; /* Borders/Secondary Bg: #E2E8F0 */
+    --primary-teal: 174 100% 27%; /* Primary: #00897B */
+    --electric-violet: 258 100% 65%; /* Accent: #7C4DFF */
+    --soft-mint: 174 80% 30%; /* Secondary Text/Accents: Darker mint for contrast */
+    --lunar: 215 25% 27%; /* Main Text: #334155 */
+    --stellar: 222 47% 11%; /* Heading Text: #0F172A */
+    --muted-slate: 215 16% 47%; /* Muted Text: #64748B */
+
+    --background: 210 40% 98%; /* Match deep-space */
+    --foreground: 215 25% 27%; /* Match lunar */
+  }
+
+  .dark {
+    --background: 220 14% 4%;
+    --foreground: 0 0% 88%;
+    --card: 222 12% 9%;
+    --card-foreground: 0 0% 88%;
+    --popover: 222 12% 9%;
+    --popover-foreground: 0 0% 88%;
+    --primary: 174 100% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 10% 14%;
+    --secondary-foreground: 0 0% 88%;
+    --muted: 222 10% 14%;
+    --muted-foreground: 228 6% 57%;
+    --accent: 258 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 10% 19%;
+    --input: 222 10% 19%;
+    --ring: 174 100% 27%;
+
+    /* Custom Dark Theme Colors */
+    --deep-space: 228 18% 5%; /* #0B0C10 */
+    --surface-dark: 220 12% 9%; /* #15171B */
+    --surface-raised: 228 14% 14%; /* #1E2028 */
+    --charcoal: 227 14% 19%; /* #2A2D38 */
+    --primary-teal: 174 100% 27%; /* #00897B */
+    --electric-violet: 258 100% 65%; /* #7C4DFF */
+    --soft-mint: 174 46% 64%; /* #80CBC4 */
+    --lunar: 0 0% 88%; /* #E0E0E0 */
+    --stellar: 0 0% 100%; /* #FFFFFF */
+    --muted-slate: 227 6% 57%; /* #8A8D98 */
+
+    --background: 228 18% 5%; /* Match deep-space */
+    --foreground: 0 0% 88%; /* Match lunar */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
