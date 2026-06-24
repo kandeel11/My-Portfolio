@@ -6,6 +6,9 @@ export interface Project {
   github?: string;
   demo?: string;
   badge?: string;
+  problem?: string;
+  solution?: string;
+  myRole?: string;
 }
 
 export interface Experience {

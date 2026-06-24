@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Server, Monitor, Database, BrainCircuit, Code2, Globe } from 'lucide-react';
@@ -11,7 +11,6 @@ const skillCategories = [
     title: 'Back-End & Architecture',
     icon: Server,
     iconColor: '#00897B',
-    variant: 'bars' as const,
     skills: [
       { name: 'C# / .NET Core', proficiency: 95 },
       { name: 'ASP.NET Core (Web API / MVC)', proficiency: 95 },
@@ -28,7 +27,6 @@ const skillCategories = [
     title: 'Front-End Technologies',
     icon: Monitor,
     iconColor: '#7C4DFF',
-    variant: 'bars' as const,
     skills: [
       { name: 'Angular 21', proficiency: 95 },
       { name: 'TypeScript', proficiency: 95 },
@@ -42,7 +40,6 @@ const skillCategories = [
     title: 'Databases & DevOps',
     icon: Database,
     iconColor: '#80CBC4',
-    variant: 'bars' as const,
     skills: [
       { name: 'Microsoft SQL Server', proficiency: 95 },
       { name: 'MySQL', proficiency: 80 },
@@ -56,7 +53,6 @@ const skillCategories = [
     title: 'AI Integration',
     icon: BrainCircuit,
     iconColor: '#00897B',
-    variant: 'bars' as const,
     skills: [
       { name: 'Generative AI APIs', proficiency: 70 },
       { name: 'Prompt Engineering', proficiency: 65 },
@@ -71,7 +67,6 @@ const skillCategories = [
     title: 'Core Competencies',
     icon: Code2,
     iconColor: '#7C4DFF',
-    variant: 'tags' as const,
     skills: [],
     tags: [
       'OOP',
@@ -88,7 +83,6 @@ const skillCategories = [
     title: 'Languages',
     icon: Globe,
     iconColor: '#80CBC4',
-    variant: 'bars' as const,
     skills: [
       { name: 'Arabic (Native)', proficiency: 100 },
       { name: 'English (B1 Intermediate)', proficiency: 70 },
@@ -100,12 +94,10 @@ const skillCategories = [
 export default function SkillsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-  const [triggered, setTriggered] = useState(false);
 
   useEffect(() => {
     if (!sectionRef.current || !cardsRef.current) return;
 
-    // Card entrance animation
     const cards = cardsRef.current.querySelectorAll('.skill-card');
     gsap.fromTo(
       cards,
@@ -120,7 +112,6 @@ export default function SkillsSection() {
           trigger: sectionRef.current,
           start: 'top 70%',
           toggleActions: 'play none none none',
-          onEnter: () => setTriggered(true),
         },
       }
     );
@@ -131,13 +122,8 @@ export default function SkillsSection() {
   }, []);
 
   return (
-    <section
-      id="skills"
-      ref={sectionRef}
-      className="bg-surface-dark py-24 lg:py-32"
-    >
+    <section id="skills" ref={sectionRef} className="bg-surface-dark py-24 lg:py-32">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-10">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-xs font-mono text-primary-teal uppercase tracking-[0.08em] mb-4 block">
             WHAT I BRING
@@ -150,11 +136,7 @@ export default function SkillsSection() {
           </p>
         </div>
 
-        {/* Skills Grid */}
-        <div
-          ref={cardsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((cat) => (
             <div key={cat.title} className="skill-card">
               <SkillCategory
@@ -162,8 +144,6 @@ export default function SkillsSection() {
                 icon={cat.icon}
                 iconColor={cat.iconColor}
                 skills={cat.skills}
-                triggered={triggered}
-                variant={cat.variant}
                 tags={cat.tags}
               />
             </div>
