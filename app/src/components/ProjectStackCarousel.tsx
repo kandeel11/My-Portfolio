@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
+// كل كارت هنا لازم يكون مشروع حقيقي موجود تحت في قسم Projects.
 const projects = [
-  { name: 'AI Real Estate Management', tech: 'ASP.NET Core • Semantic Kernel' },
-  { name: 'Vortex E-Commerce (Multi-vendor)', tech: 'Angular 21 • MediatR • Stripe' },
-  { name: 'n8n Agentic Workflows', tech: 'RAG • Intelligent Automation' },
-  { name: 'Modular Supply Chain', tech: 'Clean Architecture • CQRS' },
-  { name: 'Microservices Platform', tech: 'C# • Redis • Modular Monolith' },
-  { name: 'Intelligent CMS', tech: 'Python + Generative AI' },
+  { name: 'AI Real Estate Platform', tech: 'ASP.NET Core • Angular • Semantic Kernel' },
+  { name: 'Vortex E-Commerce (Multi-vendor)', tech: 'ASP.NET Core • Angular • Stripe' },
+  { name: 'AI Floor Plan Generator', tech: 'Python • GANs • Three.js' },
+  { name: 'Ecobazar Store', tech: 'JavaScript • Bootstrap 5 • DOM' },
+  { name: 'Student Management System', tech: 'ASP.NET Core MVC • EF Core • Identity' },
+  { name: 'Blood Bank System', tech: 'ASP.NET Core MVC • EF Core • SQL Server' },
 ];
 
 export default function ProjectStackCarousel() {

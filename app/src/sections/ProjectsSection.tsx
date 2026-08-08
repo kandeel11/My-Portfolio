@@ -13,16 +13,16 @@ const projects: Project[] = [
     name: 'AI Real Estate Platform',
     tech: ['ASP.NET Core', 'Angular 21', 'Redis', 'Semantic Kernel', 'n8n'],
     description:
-      'Modular monolith property management with AI-powered automation workflows.',
+      'Modular monolith property management with an AI assistant and automated approval workflows.',
     image: './images/ai-realestate.jpg',
     github: 'https://github.com/kandeel11/Real-Estate-ITI-Graduation-Project',
-    demo: '#',
+    demo: 'https://real-estate-iti-graduation-project.vercel.app/',
     problem:
-      'Property management systems are traditionally siloed — listings, tenant communications, maintenance requests, and analytics each live in separate tools. This causes delays, data inconsistency, and high operational overhead for property managers.',
+      'Real estate agencies approve property listings manually, so a property sits idle waiting for review. Their agents also spend the day answering the same questions about properties that are already fully documented somewhere.',
     solution:
-      'Built a unified Modular Monolith with ASP.NET Core, isolating domains while sharing infrastructure. Semantic Kernel powers intelligent AI routing and automation, n8n orchestrates external workflows, and Redis caching keeps response times under 100ms at scale.',
+      'Built a unified Modular Monolith in ASP.NET Core with CQRS and MediatR, keeping domains isolated while sharing infrastructure. I chose this over microservices deliberately: we were five junior developers on a short timeline, and the operational overhead of distributed services would have cost us the time we needed for features. Semantic Kernel powers a RAG assistant over listing documents, n8n automates the approval workflow, and Redis caches high-traffic listing endpoints with write-invalidation.',
     myRole:
-      'Led AI integration using Semantic Kernel, designed the Modular Monolith architecture, built and integrated the Admin Dashboard, and owned the full integration cycle — connecting the Angular frontend, backend modules, AI services, and third-party APIs into one cohesive system.',
+      'Owned the architecture and led a five-developer team through Agile sprints, reviewing every pull request before merge. Personally built the Redis caching layer, the Semantic Kernel AI assistant, the admin dashboard, and the CI/CD pipeline deploying to Microsoft Azure through GitHub Actions.',
   },
   {
     name: 'Vortex E-Commerce',
@@ -30,20 +30,20 @@ const projects: Project[] = [
     description:
       'Multi-vendor marketplace with role-based dashboards and secure payment processing.',
     image: './images/vortex-ecommerce.jpg',
-    github: 'https://github.com/AhmedKhalil08/AngularProject',
-    demo: 'https://tangerine-treacle-31c990.netlify.app/',
+    github: 'https://github.com/kandeel11/AngularProject',
+    demo: '#',
     problem:
       'Multi-vendor platforms require complex role separation, real-time inventory management, and secure payment flows — difficult to build correctly without a solid architecture that scales cleanly.',
     solution:
-      'Designed a layered ASP.NET Core API with role-based dashboards (Admin, Vendor, Customer), integrated Stripe for PCI-compliant payment processing, and built a reactive Angular 21 SPA for a seamless, modern shopping experience.',
+      'A layered ASP.NET Core API with role-based dashboards (Admin, Seller, Customer), Stripe and PayPal integration for payments, JWT authentication over HttpOnly cookies, SignalR for real-time admin notifications, and a reactive Angular 21 SPA using standalone components and route guards.',
     myRole:
-      'Built the entire system independently — designed the database schema, implemented the full REST API with clean architecture, integrated Stripe payment flow, and developed all three role-based dashboards on the frontend.',
+      'Built as part of a team. I designed the core database schema and built the full REST API for the product catalog, cart, and checkout pipeline, integrated Stripe and PayPal, and implemented the complete order lifecycle with automated stock deduction.',
   },
   {
     name: 'AI Floor Plan Generator',
     tech: ['Python', 'React', 'Three.js', 'GANs'],
     description:
-      'Graduation project — GAN-powered architectural layout generator reducing drafting time by 40%.',
+      'University graduation project — a GAN-powered architectural layout generator with 3D visualisation.',
     image: './images/ai-floorplan.jpg',
     github: 'https://github.com/kandeel11/floorplan-AI-GP',
     demo: '#',
@@ -51,9 +51,9 @@ const projects: Project[] = [
     problem:
       'Architectural floor plan drafting is a time-intensive, expert-driven process — inaccessible to non-professionals and slow even for experienced architects in the conceptual phase, creating a bottleneck early in the design cycle.',
     solution:
-      'Trained a GAN model on a curated architectural dataset to generate realistic floor plans from simple constraint inputs (room count, dimensions, style). A Three.js-powered 3D viewer lets users visualize and iterate on results instantly, cutting drafting time by 40%.',
+      'A GAN model trained on a curated architectural dataset generates floor plans from simple constraint inputs (room count, dimensions, style). The model is exposed through a REST API, and a Three.js viewer renders both a 2D plan and a 3D representation so users can visualise and iterate on results.',
     myRole:
-      'Built the entire project alone — collected and preprocessed training data, trained and tuned the GAN model in Python, developed the React frontend with Three.js 3D visualization, and integrated the full ML inference pipeline.',
+      'Built with a team under Prof. Hany El-Ghaish, graded A+. I worked on the Python model pipeline and the REST API layer that serves it, plus the integration between the model output and the 3D front-end viewer.',
   },
   {
     name: 'Student Management System',
@@ -74,31 +74,31 @@ const projects: Project[] = [
     name: 'Blood Bank System',
     tech: ['ASP.NET Core MVC', 'EF Core', 'SQL Server', 'Bootstrap'],
     description:
-      'Web app managing 1,000+ daily blood inventory units with expiration tracking.',
+      'Blood inventory management with donor matching and expiration tracking.',
     image: './images/blood-bank.jpg',
     github: 'https://github.com/kandeel11/BLOODBANKMANAGMENTSYSTEM',
     demo: '#',
     problem:
-      'Blood banks handling thousands of daily inventory units need real-time expiration tracking, accurate donor matching, and fast request management. Manual or slow systems directly put lives at risk.',
+      'Blood banks need real-time expiration tracking, accurate donor matching, and fast request management. Manual or slow systems directly put lives at risk.',
     solution:
-      'Built a web application processing 1,000+ daily blood units with automated expiration alerts, donor registration and matching, inventory management, and a reporting dashboard — all backed by a normalized SQL Server database.',
+      'An ASP.NET Core MVC application with automated expiration alerts, donor registration and matching, inventory management, and a reporting dashboard — all backed by a normalised SQL Server schema.',
     myRole:
-      'Built the entire system independently — designed the inventory and donor schema, implemented expiration tracking with alert logic, built the donor management module, and created the reporting dashboard.',
+      'Built independently — designed the inventory and donor schema, implemented expiration tracking with alert logic, built the donor management module, and created the reporting dashboard.',
   },
   {
     name: 'Ecobazar Store',
-    tech: ['JavaScript', 'HTML', 'CSS', 'DOM'],
+    tech: ['JavaScript (ES6+)', 'Bootstrap 5', 'HTML', 'CSS'],
     description:
-      'Client-side organic food store with optimized DOM manipulation, reducing load time by 35%.',
+      'Multi-role organic grocery store built in vanilla JavaScript — live and running.',
     image: './images/ecobazar-store.jpg',
     github: 'https://github.com/kandeel11/CST-E-commerce-Project',
     demo: 'https://kandeel11.github.io/CST-E-commerce-Project/Pages/Home.html',
     problem:
-      'Building a performant, accessible client-side e-commerce experience for an organic food store without heavy frameworks — keeping load times fast and the codebase maintainable across a collaborative team.',
+      'Building a complete, maintainable client-side e-commerce experience without a framework — three separate user roles, persistent cart and session state, and a codebase four developers could work in at once.',
     solution:
-      'Implemented an optimized vanilla JavaScript store with efficient DOM batching, lazy-loaded product images, and a clean CSS architecture — achieving a 35% reduction in page load time compared to the initial prototype.',
+      'A three-role platform (Customer, Seller, Admin) with product browsing, cart and wishlist, checkout with order tracking, seller inventory management, and admin account controls. The domain is modelled with ES6 classes, and state persists across browser tabs through localStorage and sessionStorage so a cart stays consistent wherever the user opens it. Fully responsive with Bootstrap 5.',
     myRole:
-      'Served as Team Leader — coordinated the team and task distribution, personally built the Admin Dashboard, and implemented the full authentication flow (registration, login, and session management).',
+      'Team Leader on a four-developer team — coordinated task distribution and delivery, personally built the Admin Dashboard, and implemented the full authentication flow (registration, login, and session management).',
   },
 ];
 

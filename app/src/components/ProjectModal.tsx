@@ -138,12 +138,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               className="flex items-center gap-2 px-5 py-2 rounded-xl bg-primary-teal text-white text-sm font-medium hover:bg-primary-teal/85 transition-all duration-200 shadow-glow"
             >
               <Rocket size={14} />
-              Live Deploy
+              Live Demo
             </a>
           ) : (
             <span className="flex items-center gap-2 px-5 py-2 rounded-xl bg-surface-dark border border-white/8 text-sm text-muted-slate/40 cursor-not-allowed select-none">
               <Rocket size={14} />
-              Deploy Soon
+              Demo Soon
             </span>
           )}
           <button

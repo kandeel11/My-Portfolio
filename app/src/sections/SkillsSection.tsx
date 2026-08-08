@@ -85,7 +85,7 @@ const skillCategories = [
     iconColor: '#80CBC4',
     skills: [
       { name: 'Arabic (Native)', proficiency: 100 },
-      { name: 'English (B1 Intermediate)', proficiency: 70 },
+      { name: 'English (Professional Working)', proficiency: 80 },
     ],
     tags: [],
   },

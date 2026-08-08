@@ -73,9 +73,9 @@ export default function HeroSection() {
               ref={bioRef}
               className="text-base text-muted-slate max-w-[520px] mx-auto lg:mx-0 leading-relaxed mb-10 opacity-0 translate-y-5"
             >
-              Building scalable web applications with clean architecture and cutting-edge AI.
-              Ranked 2nd in Computer Engineering class. Passionate about CQRS, microservices,
-              and intelligent systems.
+              Building web applications end to end with C#, ASP.NET Core, Angular, and SQL Server.
+              ITI Full Stack .NET graduate. Ranked 2nd in my Computer Engineering class.
+              I care about clean architecture, CQRS, and putting AI to work inside real products.
             </p>
 
             <div

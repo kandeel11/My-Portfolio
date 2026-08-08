@@ -125,15 +125,15 @@ export default function ProjectCard({ project, compact = false, onViewDetails }:
               className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary-teal/15 border border-primary-teal/30 text-sm text-primary-teal font-medium hover:bg-primary-teal hover:text-white hover:shadow-glow transition-all duration-200 active:scale-95"
             >
               <Rocket size={14} />
-              Deploy
+              Live Demo
             </a>
           ) : (
             <span
-              title="Live deployment coming soon"
+              title="Live demo not available yet"
               className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-dark border border-white/8 text-sm text-muted-slate/35 cursor-not-allowed select-none"
             >
               <Rocket size={14} />
-              Deploy
+              Live Demo
             </span>
           )}
         </div>

@@ -23,8 +23,8 @@ const contactItems = [
   },
   {
     icon: Linkedin,
-    label: 'linkedin.com/in/mohameed-khaleed',
-    href: 'https://linkedin.com/in/mohameed-khaleed-16695a176',
+    label: 'linkedin.com/in/mohamed-khaleed-16695a176',
+    href: 'https://www.linkedin.com/in/mohamed-khaleed-16695a176/',
   },
   {
     icon: Github,
@@ -34,7 +34,7 @@ const contactItems = [
 ];
 
 const socialLinks = [
-  { icon: Linkedin, href: 'https://linkedin.com/in/mohameed-khaleed-16695a176', label: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/mohamed-khaleed-16695a176/', label: 'LinkedIn' },
   { icon: Github, href: 'https://github.com/kandeel11', label: 'GitHub' },
   { icon: Mail, href: 'mailto:kandeelmohamed241@gmail.com', label: 'Email' },
 ];
